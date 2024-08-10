@@ -41,12 +41,4 @@ class MainApplication : Application(), ReactApplication {
       load()
     }
   }
-
-  @Override
-protected List<ReactPackage> getPackages() {
-	   return Arrays.asList(
-       		new MainReactPackage()
-    		new RNCConfigPackage()
-     )
-}
 }
