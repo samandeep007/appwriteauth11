@@ -10,6 +10,7 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.load
 import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.soloader.SoLoader
+import com.lugg.RNCConfig.RNCConfigPackage;
 
 class MainApplication : Application(), ReactApplication {
 
@@ -40,4 +41,12 @@ class MainApplication : Application(), ReactApplication {
       load()
     }
   }
+
+  @Override
+protected List<ReactPackage> getPackages() {
+	   return Arrays.asList(
+       		new MainReactPackage()
+    		new RNCConfigPackage()
+     )
+}
 }
